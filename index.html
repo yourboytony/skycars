@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCARS Collective | Professional Virtual Aviation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="background-slider">
+        <div class="slide" style="background-image: url('https://cdn.jetphotos.com/full/5/793290_1731978327.jpg')"></div>
+        <div class="slide" style="background-image: url('https://cdn.jetphotos.com/full/6/551505_1696048323.jpg')"></div>
+        <div class="slide" style="background-image: url('https://cdn.jetphotos.com/full/6/761691_1731095244.jpg')"></div>
+        <div class="slide" style="background-image: url('https://cdn.plnspttrs.net/26570/d-aivc-lufthansa-airbus-a350-941_PlanespottersNet_1656342_59d79c7837_o.jpg')"></div>
+        <div class="slide" style="background-image: url('https://cdn.plnspttrs.net/42663/a6-eva-emirates-airbus-a380-842_PlanespottersNet_1503194_286080aa13_o.jpg')"></div>
+    </div>
+    
+    <header class="navbar">
+        <div class="nav-brand">
+            <div class="brand-text">
+                <span class="brand-main">SKYCARS</span>
+                <span class="brand-sub">COLLECTIVE</span>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="tracker.html">Live Map</a>
+            <a href="#contact">Contact</a>
+            <a href="https://skycarscollective.ca" class="cta-button">Main Site</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Excellence in Virtual Aviation</h1>
+            <p class="hero-subtitle">Professional training and certification for the next generation of virtual pilots</p>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About SkyCARS</h2>
+                <p>SkyCARS Collective is a premier virtual aviation organization dedicated to providing professional-grade training and certification. Our commitment to excellence ensures that every virtual pilot receives the highest standard of training in the industry.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Active Pilots</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Operations</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Training Hours</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Professional Training</h3>
+                        <p>Comprehensive training programs designed to meet real-world aviation standards</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Certification</h3>
+                        <p>Industry-recognized certification programs for virtual pilots</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-plane"></i>
+                        <h3>Flight Operations</h3>
+                        <p>Professional virtual airline operations and route network</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Join SkyCARS Collective</h2>
+                <p>Ready to take your virtual aviation career to new heights?</p>
+                <div class="cta-buttons">
+                    <a href="https://skycarscollective.ca/join" class="cta-button primary">Join Now</a>
+                    <a href="mailto:contact@skycarscollective.ca" class="cta-button secondary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="tracker-preview">
+            <div class="background-images">
+                <div class="background-image"></div>
+                <div class="background-image"></div>
+                <div class="background-image"></div>
+                <div class="background-image"></div>
+                <div class="background-image"></div>
+            </div>
+            <div class="container">
+                <h2>Live VATSIM Network</h2>
+                <div class="preview-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-plane"></i>
+                        <span class="stat-number" id="preview-pilots">...</span>
+                        <span class="stat-label">Pilots Online</span>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-headset"></i>
+                        <span class="stat-number" id="preview-controllers">...</span>
+                        <span class="stat-label">Controllers Online</span>
+                    </div>
+                </div>
+                <div id="preview-map" class="preview-map"></div>
+                <div id="aircraft-images" class="aircraft-images-grid"></div>
+                <div class="preview-footer">
+                    <a href="tracker.html" class="preview-cta">
+                        Open Full Map <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-text">
+                        <span class="brand-main">SKYCARS</span>
+                        <span class="brand-sub">COLLECTIVE</span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SkyCARS Collective. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+    <div id="photo-credit" class="photo-credit"></div>
+    
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>
