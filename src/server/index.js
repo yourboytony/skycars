@@ -1,17 +1,21 @@
-import express from 'express'
-import cors from 'cors'
-import './db/mongoose.js'
-import authRoutes from './routes/auth.js'
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import Weather from '../views/Weather.vue'
 
-const app = express()
-const PORT = process.env.PORT || 3000
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/weather',
+      name: 'weather',
+      component: Weather
+    }
+  ]
+})
 
-app.use(cors())
-app.use(express.json())
-
-// Routes
-app.use('/api/auth', authRoutes)
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-}) 
+export default router
